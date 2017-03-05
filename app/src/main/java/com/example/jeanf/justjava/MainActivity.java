@@ -18,38 +18,41 @@ public class MainActivity extends AppCompatActivity {
      */
     int quantity=0;
     public void submitOrder(View view) {
-
-        displayPrice(quantity*5);
-        String priceMessage="Total Item Count "+ quantity + " Coffees";
-        displayMessage (priceMessage);
+        int price= calculatePrice();
+        displayMessage(createOrderSummary(price));
+    }
+    public String createOrderSummary(int totalPrice)
+    {
+        return "Name: JF" + "\n" + "Quantity:" + quantity + "\n" + "Total: "
+            + NumberFormat.getCurrencyInstance().format(totalPrice) +"\nTank You!!" ;
     }
     public void displayMessage(String message){
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(message);
     }
     public void increment(View view)
     {
         quantity=quantity+1;
-        display(quantity);
-        displayPrice(quantity*5);
-    }
+        displayQuantity(quantity);
+      }
     public void decrement(View view)
     {
         quantity=quantity-1;
-        display(quantity);
-        displayPrice(quantity*5);
+        displayQuantity(quantity);
+        // displayPrice(quantity*5);
     }
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void display(int number) {
+    private void displayQuantity(int numberOfCoffes) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText("" + numberOfCoffes);
     }
-
-    private void displayPrice(int number)
-    {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText("Amount due " + NumberFormat.getCurrencyInstance().format(number)+"\nThank YOU!");
+/**
+        * Calculates the price of the order.
+            *
+ */
+    private int calculatePrice() {
+        return  quantity * 5;
     }
 }
