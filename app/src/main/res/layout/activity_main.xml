@@ -18,19 +18,19 @@
             android:id="@+id/nameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:hint="@string/hint_name"
             android:inputType="textCapWords"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TOPPINGD" />
+            android:text="@string/toppings" />
 
         <CheckBox
             android:id="@+id/creamCheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="Whipped cream"
+            android:text="@string/whipped_cream"
             android:textSize="16sp" />
 
         <CheckBox
@@ -38,13 +38,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="24dp"
-            android:text="Chocolate"
+            android:text="@string/chocolate"
             android:textSize="16sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:text="Quatity"
+            android:text="@string/quatity"
             android:textAllCaps="true" />
 
         <LinearLayout
@@ -65,7 +65,7 @@
                 android:layout_marginLeft="8dp"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
-                android:text="0"
+                android:text="1"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="ORDER SUMMARY"
+            android:text="@string/order_summary"
             android:textAllCaps="true" />
 
         <TextView
@@ -98,6 +98,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="submitOrder"
-            android:text="Order" />
+            android:text="@string/order" />
     </LinearLayout>
 </ScrollView>
