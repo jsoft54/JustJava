@@ -21,8 +21,7 @@
             android:hint="@string/hint_name"
             android:inputType="textCapWords"/>
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/HeaderTextStyle"
             android:text="@string/toppings" />
 
         <CheckBox
@@ -41,11 +40,9 @@
             android:text="@string/chocolate"
             android:textSize="16sp" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/HeaderTextStyle"
             android:layout_marginLeft="16dp"
-            android:text="@string/quatity"
-            android:textAllCaps="true" />
+            android:text="@string/quatity" />
 
         <LinearLayout
             android:layout_width="match_parent"
